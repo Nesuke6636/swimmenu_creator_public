@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>競泳メニュー作成支援システム</title>
+    <meta name="description" content="競泳・水泳の練習メニューを直感的に作成・自動計算し、綺麗なA4レイアウトのPDFを出力できるシステム。A/B/Cチーム編成・印刷対応のPDF出力機能搭載。" />
+    <meta property="og:title" content="競泳メニュー作成支援システム" />
+    <meta property="og:description" content="競泳・水泳の練習メニューを直感的に作成・自動計算し、綺麗なA4レイアウトのPDFを出力できるシステム。" />
+    <!-- Google Fonts: Noto Sans JP for cross-platform identical font rendering (Windows, Android, iOS, macOS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      html, body {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-feature-settings: "tnum" 1;
+        font-variant-numeric: tabular-nums;
+      }
+      *, *::before, *::after {
+        font-family: 'Noto Sans JP', sans-serif;
+      }
+    </style>
+    <script>
+      // Suppress Vite HMR WebSocket connection errors in iframe/preview environment per platform instructions
+      window.addEventListener('error', function(event) {
+        var msg = (event && event.message) ? String(event.message) : '';
+        var src = (event && event.filename) ? String(event.filename) : '';
+        if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('createWebSocketModuleRunnerTransport') !== -1 || src.indexOf('@vite/client') !== -1) {
+          if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+          if (event.preventDefault) event.preventDefault();
+          return true;
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = (event && event.reason) ? String(event.reason) : '';
+        if (reason.indexOf('WebSocket') !== -1 || reason.indexOf('createWebSocketModuleRunnerTransport') !== -1) {
+          if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+          if (event.preventDefault) event.preventDefault();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

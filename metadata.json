@@ -1,0 +1,8 @@
+{
+  "name": "配信用_競泳メニュー作成支援システム",
+  "description": "競泳の練習メニューを直感的に作成・自動計算し、綺麗なA4レイアウトのPDFを出力できるWEBアプリ。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
